@@ -3,5 +3,12 @@ a).prepare env for compile && python
 sudo apt-get update
 sudo apt-get install git build-essential cmake gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl
 
+b).make a bin directory to store your tools.
+mkdir ~/bin/
+echo "PATH=~/bin:$PATH" >> ~/.bashrc
+
 b).featch source code of neovim
 git clone https://github.com/neovim/neovim.git
+cd neovim/
+git checkout release-0.11
+make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=$HOME/ install
