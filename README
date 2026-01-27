@@ -1,0 +1,7 @@
+1.install neovim
+a).prepare env for compile && python
+sudo apt-get update
+sudo apt-get install git build-essential cmake gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl
+
+b).featch source code of neovim
+git clone https://github.com/neovim/neovim.git
