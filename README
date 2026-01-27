@@ -6,6 +6,7 @@ sudo apt-get install git build-essential cmake gettext libtool libtool-bin autoc
 b).make a bin directory to store your tools.
 mkdir ~/bin/
 echo "PATH=~/bin:$PATH" >> ~/.bashrc
+source ~/.bashrc
 
 b).featch source code of neovim
 git clone https://github.com/neovim/neovim.git
