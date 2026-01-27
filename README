@@ -14,14 +14,43 @@ cd neovim/
 git checkout release-0.11
 make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=$HOME/ install
 
-2.install python3 and
+2.install python3
 python3 --version
 //python version should >= 3.8,my version is(Python 3.12.3).
 //install other python tools
 sudo apt install python3-pip python3-dev python3-venv
 
-----
-other tools
+3.add settings for nvim
+a)Prepare env and tools:
+sudo apt install tree nodejs ripgrep
+
+b).new a config dir and files
+mkdir -p ~/.config/nvim/lua/config/plugins/
+
+touch ~/.config/nvim/init.lua
+touch ~/.config/nvim/lua/config/lazy.lua
+touch ~/.config/nvim/lua/config/basic.lua
+touch ~/.config/nvim/lua/config/keymaps.lua
+
+c).add config setting
+//add to init.lua
+require("config.basic")
+require("config.keymaps")
+require("config.lazy")
+
+//目录结构如下：
+~/.config/nvim$ tree .
+.
+├── init.lua
+├── lazy-lock.json
+└── lua
+    └── config
+        ├── basic.lua
+        ├── keymaps.lua
+        ├── lazy.lua
+        └── plugins
+
+------------------ other tools ------------------
 1.fzf
 a). install 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
