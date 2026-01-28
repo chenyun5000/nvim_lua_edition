@@ -24,7 +24,7 @@ sudo npm install -g neovim
 
 3.add settings for nvim
 a)Prepare env and tools:
-sudo apt install tree ripgrep fd-find
+sudo apt install tree ripgrep fd-find clangd
 
 b).new a config dir and files
 mkdir -p ~/.config/nvim/lua/config/plugins/
